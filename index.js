@@ -299,6 +299,8 @@ var writeHeader = function (jsonData, writeHeadTag) {
 
     headContent += jsonData.metas.viewport ? metaTag + nameAttr + '"viewport"' + contentAttr + (jsonData.metas.viewport.width ? "width=" + jsonData.metas.viewport.width : '') + (jsonData.metas.viewport.height ? ", height=" + jsonData.metas.viewport.height : '') + (jsonData.metas.viewport.initialScale ? ", initial-scale=" + jsonData.metas.viewport.initialScale : '') + (jsonData.metas.viewport.maximumScale ? ", maximum-scale=" + jsonData.metas.viewport.maximumScale : '') + (jsonData.metas.viewport.minimumScale ? ", minimum-scale=" + jsonData.metas.viewport.minimumScale : '') + (jsonData.metas.viewport.userScalable ? ", user-scalable=" + jsonData.metas.viewport.userScalable : '') + '">' : '';
 
+    headContent += jsonData.metas.themeColor ? metaTag + nameAttr + '"theme-color"' + contentAttr + jsonData.metas.themeColor + '">' : '';
+
     headContent += jsonData.metas.webAppCapable.ios.appleMobileWebAppCapable ? metaTag + nameAttr + '"apple-mobile-web-app-capable"' + contentAttr + jsonData.metas.webAppCapable.ios.appleMobileWebAppCapable + '">' : '';
     headContent += jsonData.metas.webAppCapable.ios.appleMobileWebAppTitle ? metaTag + nameAttr + '"apple-mobile-web-app-title"' + contentAttr + jsonData.metas.webAppCapable.ios.appleMobileWebAppTitle + '">' : '';
     headContent += jsonData.metas.webAppCapable.ios.appleMobileWebAppStatusBarStyle ? metaTag + nameAttr + '"apple-mobile-web-app-status-bar-style"' + contentAttr + jsonData.metas.webAppCapable.ios.appleMobileWebAppStatusBarStyle + '">' : '';
